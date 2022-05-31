@@ -6,6 +6,8 @@ Hier sind alle Images hinterlegt, ein Image ist grob gesagt eine Applikation, we
 Auf der Webseite kann man unter Explore alle diese Images ansehen, Verified Image heisst wenn es vom hersteller selber, oder von Docker überprüft wurde, kurz gesagt, diese Images sind sicher.
 Wenn man sein Image gefunden hat kann man denn Befehl sehen um es zu pullen. Ein Image pullen, heist eigentlich einfach es herunterzuladen un lokal zu haben. Dieser Schritt ist notwendig um es später laufen und verändern zu können.
 
+![docker image](images/docker.png)
+
 
 Mit:
 ```docker pull ubuntu/mysql```
