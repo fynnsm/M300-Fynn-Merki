@@ -32,4 +32,5 @@ Mit:
 docker exec -it mysql-container bash
 kann man auf den Container selber verbinden, wie wenn man auf eine VM verbindet, wenn man connectet ist, kann man unter /var/lib/mysql seine Tables sehen
 
+Um den Container zu stoppen, "herunterzufahren":
 docker stop fynnsql
