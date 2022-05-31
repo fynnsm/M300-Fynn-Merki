@@ -14,11 +14,19 @@ Hinter dem Namen des Images kann man mit einem ":" getrennt noch die version des
 
 Nach dem Download kann mit dem Befehl:
 docker images
-herausgefunden werden, welche Images lokal schon vorhanden sind und die version ist auch sichtbar
+herausgefunden werden, welche Images lokal schon vorhanden sind und die version ist auch sichtbar.
 
-
+Anschliessend wird mit:
 docker run -d --name mysql-container -e TZ=UTC -p 30306:3306 -e MYSQL_ROOT_PASSWORD=My:S3cr3t/ ubuntu/mysql:8.0-22.04_beta
-
+Das Image in einem Container gestartet. Falls das Image hier noch nict heruntergeladen ist wird es jetzt automatisch gepullt.
+Der Run Befehl besteht aus folgenden Teilen:
+- "docker run" um zu sagen was man überhaupt will container stoppen oder starten
+- "-d" detach um wieder zurück auf die Commandozeile zu kommen
+- "-- name" um den Namen des Containers anzugeben
+- "-e TZ=" um die Timezone des Servers zu setzten 
+- "-e MYSQL_ROOT_PASSWORD=" um das Root Passwort des Sql Servers zu definieren
+- "-p" um das Port forwarding einzurichten
+- und hinten noch das image mit ":" um die Version anzugeben
 
 
 docker stop fynnsql
