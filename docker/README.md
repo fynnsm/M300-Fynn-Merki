@@ -22,12 +22,12 @@ Anschliessend wird mit:
 
 Das Image in einem Container gestartet. Falls das Image hier noch nict heruntergeladen ist wird es jetzt automatisch gepullt.
 Der Run Befehl besteht aus folgenden Teilen:
-- "docker run" um zu sagen was man überhaupt will container stoppen oder starten
-- "-d" detach um wieder zurück auf die Commandozeile zu kommen
-- "-- name" um den Namen des Containers anzugeben
-- "-e TZ=" um die Timezone des Servers zu setzten 
-- "-e MYSQL_ROOT_PASSWORD=" um das Root Passwort des Sql Servers zu definieren
-- "-p" um das Port forwarding einzurichten also anfragen welche der Host auf "30306" bekommt werden intern auf den Port "3306" weitergeleitet, auf welchem der Docker Deamon wartet. wie bei einer VM
+- ```docker run``` um zu sagen was man überhaupt will container stoppen oder starten
+- ```-d``` detach um wieder zurück auf die Commandozeile zu kommen
+- ```-- name``` um den Namen des Containers anzugeben
+- ```-e TZ=``` um die Timezone des Servers zu setzten 
+- ```-e MYSQL_ROOT_PASSWORD=``` um das Root Passwort des Sql Servers zu definieren
+- ```-p``` um das Port forwarding einzurichten also anfragen welche der Host auf "30306" bekommt werden intern auf den Port "3306" weitergeleitet, auf welchem der Docker Deamon wartet. wie bei einer VM
 - und hinten noch das image mit ":" um die Version anzugeben
 
 Mit:
