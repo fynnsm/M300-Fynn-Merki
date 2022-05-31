@@ -25,10 +25,11 @@ Der Run Befehl besteht aus folgenden Teilen:
 - "-- name" um den Namen des Containers anzugeben
 - "-e TZ=" um die Timezone des Servers zu setzten 
 - "-e MYSQL_ROOT_PASSWORD=" um das Root Passwort des Sql Servers zu definieren
-- "-p" um das Port forwarding einzurichten
+- "-p" um das Port forwarding einzurichten also anfragen welche der Host auf "30306" bekommt werden intern auf den Port "3306" weitergeleitet, auf welchem der Docker Deamon wartet. wie bei einer VM
 - und hinten noch das image mit ":" um die Version anzugeben
 
+Mit:
+docker exec -it mysql-container bash
+kann man auf den Container selber verbinden, wie wenn man auf eine VM verbindet, wenn man connectet ist, kann man unter /var/lib/mysql seine Tables sehen
 
 docker stop fynnsql
-
-docker exec -it mysql-container bash
