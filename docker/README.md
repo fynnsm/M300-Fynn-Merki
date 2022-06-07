@@ -40,6 +40,9 @@ kann man auf den Container selber verbinden, wie wenn man auf eine VM verbindet,
 Um den Container zu stoppen, "herunterzufahren":
 ```docker stop fynnsql```
 
+
+
+
 ## Docker Container mit externem Speichermedium
 ```docker volume```
 zeigt alle Docker Volumen an 
