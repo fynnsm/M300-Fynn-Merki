@@ -39,3 +39,22 @@ kann man auf den Container selber verbinden, wie wenn man auf eine VM verbindet,
 
 Um den Container zu stoppen, "herunterzufahren":
 ```docker stop fynnsql```
+
+## Docker Container mit externem Speichermedium
+```docker volume```
+zeigt alle Docker Volumen an 
+
+```docker volume prune```
+Löscht alle Volumen, welche nicht aktiv gebraucht werden
+
+```docker volume create mydbstore```
+erstellt ein neues Docker volumen
+
+```docker volume ls```
+zeigt alle Volumen an
+
+```docker volume inspect mydbstore```
+Um Das Volumen, welches wir erstellt haben zu überprüfen. Auf Mountpoint sieht man wo es auf dem Host system abgelegt ist.
+
+```docker run -d --name mysql-container -v mydbstore:/var/lib/mysql -p 30306:3306 -e MYSQL_ROOT_PASSWORD=My:S3cr3t/ ubuntu/mysql:8.0-22.04_beta```
+ Container wieder erstellen und mit ```-v mydbstore:/var/lib/mysql``` der Teil nach dem Doppelpunkt gibt an welcher ordner auf dem Container dieses Volumen sein soll.
