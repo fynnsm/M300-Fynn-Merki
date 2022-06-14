@@ -236,5 +236,12 @@ ansehen:
 ]
 ```
 
-Alle nicht gebrauchten Netzwerke löschen:
+Alle nicht gebrauchten docNetzwerke löschen:
 ```docker network prune```
+
+
+## Docker image mit Docker hub
+
+Als erstes einen Docker HUB acc erstellen auf: hub.docker.com
+
+Mit folgenden Befehlen dad Gitlab von Herr Calisto lokal kopieren 
