@@ -61,3 +61,83 @@ Um Das Volumen, welches wir erstellt haben zu überprüfen. Auf Mountpoint sieht
 
 ```docker run -d --name mysql-container -v mydbstore:/var/lib/mysql -p 30306:3306 -e MYSQL_ROOT_PASSWORD=My:S3cr3t/ ubuntu/mysql:8.0-22.04_beta```
  Container wieder erstellen und mit ```-v mydbstore:/var/lib/mysql``` der Teil nach dem Doppelpunkt gibt an welcher ordner auf dem Container dieses Volumen sein soll.
+
+## ubuntu image/build
+
+Container erstellen:
+```docker run -it --name <name> --hostname <name> ubuntu```
+
+installations history:
+```docker history <image>```
+
+Sehen welche Container aktiv sind:
+```docker ps ```
+
+
+ind die den Container selber gehen:
+```docker exec -it <name> bash```
+
+container updaten 
+```apt-get udpate```
+
+zwei programme installiern:
+```apt-get install -y cowsay fortune```
+
+testen ob installiert ist:
+```/usr/games/fortune | /usr/games/cowsay```
+
+Ergebnis:
+``` _________________________________________
+/ The Least Perceptive Literary Critic    \
+|                                         |
+| The most important critic in our field  |
+| of study is Lord Halifax. A most        |
+| individual judge of poetry, he once     |
+| invited Alexander Pope round to give a  |
+| public reading of his latest poem.      |
+|                                         |
+| Pope, the leading poet of his day, was  |
+| greatly surprised when Lord Halifax     |
+| stopped him four or five times and      |
+| said, "I beg your pardon, Mr. Pope, but |
+| there is something in that passage that |
+| does not quite please me."              |
+|                                         |
+| Pope was rendered speechless, as this   |
+| fine critic suggested sizeable and      |
+| unwise emendations to his latest        |
+| masterpiece. "Be so good as to mark the |
+| place and consider at your leisure. I'm |
+| sure you can give it a better turn."    |
+|                                         |
+| After the reading, a good friend of     |
+| Lord Halifax, a certain Dr. Garth, took |
+| the stunned Pope to one side. "There is |
+| no need to touch the lines," he said.   |
+| "All you need do is leave them just as  |
+| they are, call on Lord Halifax two or   |
+| three months hence, thank him for his   |
+| kind observation on those passages, and |
+| then read them to him as altered. I     |
+| have known him much longer than you     |
+| have, and will be answerable for the    |
+| event."                                 |
+|                                         |
+| Pope took his advice, called on Lord    |
+| Halifax and read the poem exactly as it |
+| was before. His unique critical         |
+| faculties had lost none of their edge.  |
+| "Ay", he commented, "now they are       |
+| perfectly right. Nothing can be         |
+| better."                                |
+|                                         |
+| -- Stephen Pile, "The Book of Heroic    |
+\ Failures"                               /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
