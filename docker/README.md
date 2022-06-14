@@ -156,3 +156,11 @@ Ergebnis:
 REPOSITORY                                                       TAG              IMAGE ID       CREATED          SIZE
 img/unbuntuimg                                                   latest           b6f6a9920269   56 seconds ago   162MB
 ```
+
+nun kann das Image wieder gestartet werden:
+```docker run -it --name <name> --hostname <name> img/<name> bash```
+
+(mit bash ist man direkt in der Bash)
+
+
+## Docker Network
