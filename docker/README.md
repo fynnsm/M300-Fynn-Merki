@@ -251,3 +251,16 @@ Mit folgenden Befehlen dad Gitlab von Herr Calisto lokal kopieren
 ```$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git ```  Repo klonen
 ```$ cd Container-CAL-webapp-v1/ ``` ins Repo-Unterverzeichnis hüpfen
 ```$ cd APP  ``` Ins Unte
+
+Sobald man am richtigen ort ist kann man das File ```views/home.pug``` anpassen, wichtig hinter ein H1 schreiben.
+
+nach dem ein Image erstellen, name durch namen ersetzten.
+ ```$ docker image build -t <name>/webapp_one:1.0 .```
+
+ jetzt sich mit seinem dockker Account einlogen:
+
+ ```$ docker login --username=<name>```
+
+ Danach das image auf docker hub pushen:
+
+ ```$ docker image push <name>/webapp_one:1.0```
