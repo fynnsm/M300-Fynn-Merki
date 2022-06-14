@@ -178,3 +178,63 @@ dae535ca81f8   bridge    bridge    local
 ee5ea6d1a081   host      host      local
 550d4d071b12   none      null      local
 ```
+
+bridge ansehen, z.B. Netzwork oder Gateway:
+
+```docker network inspect bridge```
+
+neues Netzwerk erstellen:
+
+```docker network create mynetwork```
+
+jetzt wieder die Netzwerke auflisten:
+```docker network ls```
+
+Ergebnis:
+```
+NETWORK ID     NAME        DRIVER    SCOPE
+dae535ca81f8   bridge      bridge    local
+ee5ea6d1a081   host        host      local
+ad0d2e747c1b   mynetwork   bridge    local
+550d4d071b12   none        null      local
+```
+
+ansehen:
+```Docker inspect mynetwork```
+
+```
+
+[
+    {
+        "Name": "mynetwork",
+        "Id": "ad0d2e747c1b9ccdde94fb61d32c24231f8cf89340632c3b6ddd987df564e266",
+        "Created": "2022-06-14T06:33:06.664955538Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+```
+
+Alle nicht gebrauchten Netzwerke löschen:
+```docker network prune```
