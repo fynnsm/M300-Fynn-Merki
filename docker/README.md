@@ -141,3 +141,18 @@ Ergebnis:
                 ||     ||
 ```
 
+wieder aus dem Contianer gehen: 
+```exit```
+
+Docker image erstellen vom Container, ersteer Name nme des Containers, zweiter Name de neuen images:
+```docker commit <name> img/<name>```
+
+Images anshenen:
+```docker images```
+
+
+Ergebnis:
+```
+REPOSITORY                                                       TAG              IMAGE ID       CREATED          SIZE
+img/unbuntuimg                                                   latest           b6f6a9920269   56 seconds ago   162MB
+```
