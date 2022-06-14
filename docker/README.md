@@ -245,3 +245,9 @@ Alle nicht gebrauchten docNetzwerke löschen:
 Als erstes einen Docker HUB acc erstellen auf: hub.docker.com
 
 Mit folgenden Befehlen dad Gitlab von Herr Calisto lokal kopieren 
+
+```$ mkdir TEMP_Docker ``` Unterverzeichnis "TEMP_Docker" erstellen
+```$ cd TEMP_Docker```   Ins Unterverzeichnis "TEMP_Docker" wechseln 
+```$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git ```  Repo klonen
+```$ cd Container-CAL-webapp-v1/ ``` ins Repo-Unterverzeichnis hüpfen
+```$ cd APP  ``` Ins Unte
