@@ -164,3 +164,17 @@ nun kann das Image wieder gestartet werden:
 
 
 ## Docker Network
+
+wir starten wieder unseren sql container:
+```docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=secret -p 3036:3036 mysql```
+
+wir sehen uns an welche netzwerke schon vorhanden sind:
+```docker network ls```
+
+Ergebnis:
+```
+NETWORK ID     NAME      DRIVER    SCOPE
+dae535ca81f8   bridge    bridge    local
+ee5ea6d1a081   host      host      local
+550d4d071b12   none      null      local
+```
