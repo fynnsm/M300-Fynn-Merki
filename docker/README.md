@@ -263,4 +263,7 @@ nach dem ein Image erstellen, name durch namen ersetzten.
 
  Danach das image auf docker hub pushen:
 
- ```$ docker image push <name>/webapp_one:1.0```
+ ```$ docker image push <name>do/webapp_one:1.0```
+
+ Jetzt nur noch die den Container starten: 
+``` docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one:1.0 ```
