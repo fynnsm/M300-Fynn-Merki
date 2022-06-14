@@ -165,10 +165,10 @@ nun kann das Image wieder gestartet werden:
 
 ## Docker Network
 
-wir starten wieder unseren sql container:
+wir starten wieder unseren sql container:<br>
 ```docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=secret -p 3036:3036 mysql```
 
-wir sehen uns an welche netzwerke schon vorhanden sind:
+wir sehen uns an welche netzwerke schon vorhanden sind:<br>
 ```docker network ls```
 
 Ergebnis:
@@ -179,15 +179,15 @@ ee5ea6d1a081   host      host      local
 550d4d071b12   none      null      local
 ```
 
-bridge ansehen, z.B. Netzwork oder Gateway:
+bridge ansehen, z.B. Netzwork oder Gateway:<br>
 
 ```docker network inspect bridge```
 
-neues Netzwerk erstellen:
+neues Netzwerk erstellen:<br>
 
 ```docker network create mynetwork```
 
-jetzt wieder die Netzwerke auflisten:
+jetzt wieder die Netzwerke auflisten:<br>
 ```docker network ls```
 
 Ergebnis:
@@ -246,24 +246,24 @@ Als erstes einen Docker HUB acc erstellen auf: hub.docker.com
 
 Mit folgenden Befehlen dad Gitlab von Herr Calisto lokal kopieren 
 
-```$ mkdir TEMP_Docker ``` Unterverzeichnis "TEMP_Docker" erstellen
-```$ cd TEMP_Docker```   Ins Unterverzeichnis "TEMP_Docker" wechseln 
-```$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git ```  Repo klonen
-```$ cd Container-CAL-webapp-v1/ ``` ins Repo-Unterverzeichnis hüpfen
+```$ mkdir TEMP_Docker ``` Unterverzeichnis "TEMP_Docker" erstellen <br>
+```$ cd TEMP_Docker```   Ins Unterverzeichnis "TEMP_Docker" wechseln <br>
+```$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git ```  Repo klonen<br>
+```$ cd Container-CAL-webapp-v1/ ``` ins Repo-Unterverzeichnis hüpfen<br>
 ```$ cd APP  ``` Ins Unte
 
 Sobald man am richtigen ort ist kann man das File ```views/home.pug``` anpassen, wichtig hinter ein H1 schreiben.
 
-nach dem ein Image erstellen, name durch namen ersetzten.
+nach dem ein Image erstellen, name durch namen ersetzten.<br>
  ```$ docker image build -t <name>/webapp_one:1.0 .```
 
- jetzt sich mit seinem dockker Account einlogen:
+ jetzt sich mit seinem dockker Account einlogen:<br>
 
  ```$ docker login --username=<name>```
 
- Danach das image auf docker hub pushen:
+ Danach das image auf docker hub pushen:<br>
 
  ```$ docker image push <name>do/webapp_one:1.0```
 
- Jetzt nur noch die den Container starten: 
+ Jetzt nur noch die den Container starten: <br>
 ``` docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one:1.0 ```
