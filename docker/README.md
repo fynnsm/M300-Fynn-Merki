@@ -267,3 +267,9 @@ nach dem ein Image erstellen, name durch namen ersetzten.<br>
 
  Jetzt nur noch die den Container starten: <br>
 ``` docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one:1.0 ```
+
+
+
+
+###LB02
+Plex in container mit externem Volume für filme und serien externes volume vlt auch auf shared drive
